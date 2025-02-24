@@ -13,9 +13,18 @@ export default function Contact() {
       >
         <Card className="max-w-2xl mx-auto bg-card/50 backdrop-blur-sm border-primary/10">
           <CardHeader>
-            <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent mb-4">
-              Contact Information
-            </CardTitle>
+            <div className="flex flex-col items-center mb-6">
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-primary/20">
+                <img
+                  src="/assets/WhatsApp Image 2025-02-24 at 9.51.43 PM.jpeg"
+                  alt="Ahmed Nadir Ahmed Gilani"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
+                Ahmed Nadir Ahmed Gilani
+              </CardTitle>
+            </div>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4">
