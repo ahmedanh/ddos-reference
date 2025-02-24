@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, SelectGroup, SelectLabel } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Globe, Book } from "lucide-react";
+import { Globe, Book, User } from "lucide-react";
 import { CommandCard } from "@/components/CommandCard";
 import { attackCommands } from "@/lib/attackData";
 
@@ -41,6 +41,14 @@ export default function AttackSlides() {
             className="rounded-full"
           >
             <Book className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setLocation("/contact")}
+            className="rounded-full"
+          >
+            <User className="h-5 w-5" />
           </Button>
           <Button
             variant="outline"
