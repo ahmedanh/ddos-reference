@@ -13,6 +13,36 @@ export const en = {
     purpose: "Purpose",
     selectAttack: "Select Attack Type"
   },
+  glossary: {
+    title: "DDoS Attack Categories & Glossary",
+    categories: {
+      flood: {
+        title: "Flood Attacks",
+        description: "These attacks attempt to overwhelm a target by sending a large volume of traffic.",
+        attacks: ["udpFlood", "icmpFlood", "synFlood", "massiveSynFlood", "randomData"]
+      },
+      scanning: {
+        title: "Scanning Attacks",
+        description: "These attacks are used to discover and analyze network vulnerabilities.",
+        attacks: ["tcpFinScan", "tcpAckScan", "mtuTest"]
+      },
+      protocol: {
+        title: "Protocol Manipulation Attacks",
+        description: "These attacks exploit weaknesses in network protocols.",
+        attacks: ["christmasTree", "ttlManipulation", "spoofedPort", "adjustPacketTiming"]
+      },
+      data: {
+        title: "Data Manipulation Attacks",
+        description: "These attacks focus on manipulating packet contents and data patterns.",
+        attacks: ["icmpExfiltration", "customPattern", "customHttpGet", "fragmentedPacket"]
+      },
+      tcpip: {
+        title: "TCP/IP Stack Attacks",
+        description: "These attacks target fundamental network protocol implementations.",
+        attacks: ["traceroute", "landAttack"]
+      }
+    }
+  },
   attacks: {
     title: "DDoS Attack Commands Reference",
     udpFlood: {

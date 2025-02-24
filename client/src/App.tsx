@@ -4,6 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import LanguageSelect from "@/pages/LanguageSelect";
 import AttackSlides from "@/pages/AttackSlides";
+import Glossary from "@/pages/Glossary";
 import NotFound from "@/pages/not-found";
 import "./i18n/i18n";
 
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={LanguageSelect} />
       <Route path="/attacks" component={AttackSlides} />
+      <Route path="/glossary" component={Glossary} />
       <Route component={NotFound} />
     </Switch>
   );

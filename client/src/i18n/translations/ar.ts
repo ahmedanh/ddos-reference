@@ -13,6 +13,36 @@ export const ar = {
     purpose: "الغرض",
     selectAttack: "اختر نوع الهجوم"
   },
+  glossary: {
+    title: "فئات هجمات حجب الخدمة والمصطلحات",
+    categories: {
+      flood: {
+        title: "هجمات الفيضان",
+        description: "هذه الهجمات تحاول إغراق الهدف بإرسال كمية كبيرة من حركة المرور.",
+        attacks: ["udpFlood", "icmpFlood", "synFlood", "massiveSynFlood", "randomData"]
+      },
+      scanning: {
+        title: "هجمات الفحص والمسح",
+        description: "تُستخدم هذه الهجمات لاكتشاف وتحليل نقاط الضعف في الشبكة.",
+        attacks: ["tcpFinScan", "tcpAckScan", "mtuTest"]
+      },
+      protocol: {
+        title: "هجمات التلاعب بالبروتوكولات",
+        description: "هذه الهجمات تستغل نقاط الضعف في بروتوكولات الشبكة.",
+        attacks: ["christmasTree", "ttlManipulation", "spoofedPort", "adjustPacketTiming"]
+      },
+      data: {
+        title: "هجمات التلاعب بالبيانات",
+        description: "تركز هذه الهجمات على التلاعب بمحتويات الحزم وأنماط البيانات.",
+        attacks: ["icmpExfiltration", "customPattern", "customHttpGet", "fragmentedPacket"]
+      },
+      tcpip: {
+        title: "هجمات على بروتوكول TCP/IP",
+        description: "تستهدف هذه الهجمات تطبيقات بروتوكولات الشبكة الأساسية.",
+        attacks: ["traceroute", "landAttack"]
+      }
+    }
+  },
   attacks: {
     title: "مرجع أوامر هجمات حجب الخدمة",
     udpFlood: {

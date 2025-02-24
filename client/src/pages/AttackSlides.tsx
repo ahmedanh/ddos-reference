@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, Book } from "lucide-react";
 import { CommandCard } from "@/components/CommandCard";
 import { attackCommands } from "@/lib/attackData";
 
 export default function AttackSlides() {
   const { t, i18n } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [_, setLocation] = useLocation();
 
   const attack = attackCommands[currentSlide];
 
@@ -23,14 +25,24 @@ export default function AttackSlides() {
         <h1 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
           {t("attacks.title")}
         </h1>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={toggleLanguage}
-          className="rounded-full"
-        >
-          <Globe className="h-5 w-5" />
-        </Button>
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setLocation("/glossary")}
+            className="rounded-full"
+          >
+            <Book className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleLanguage}
+            className="rounded-full"
+          >
+            <Globe className="h-5 w-5" />
+          </Button>
+        </div>
       </div>
 
       <div className="w-full max-w-md mx-auto mb-8">
