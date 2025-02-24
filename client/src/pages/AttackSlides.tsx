@@ -2,11 +2,19 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, SelectGroup, SelectLabel } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Globe, Book } from "lucide-react";
 import { CommandCard } from "@/components/CommandCard";
 import { attackCommands } from "@/lib/attackData";
+
+const categories = [
+  { id: "flood", attacks: ["udpFlood", "icmpFlood", "synFlood", "massiveSynFlood", "randomData"] },
+  { id: "scanning", attacks: ["tcpFinScan", "tcpAckScan", "mtuTest"] },
+  { id: "protocol", attacks: ["christmasTree", "ttlManipulation", "spoofedPort", "adjustPacketTiming"] },
+  { id: "data", attacks: ["icmpExfiltration", "customPattern", "customHttpGet", "fragmentedPacket"] },
+  { id: "tcpip", attacks: ["traceroute", "landAttack"] }
+];
 
 export default function AttackSlides() {
   const { t, i18n } = useTranslation();
@@ -50,14 +58,24 @@ export default function AttackSlides() {
           value={currentSlide.toString()}
           onValueChange={(value) => setCurrentSlide(parseInt(value))}
         >
-          <SelectTrigger>
+          <SelectTrigger className="w-full">
             <SelectValue placeholder={t("common.selectAttack")} />
           </SelectTrigger>
           <SelectContent>
-            {attackCommands.map((cmd, index) => (
-              <SelectItem key={cmd.key} value={index.toString()}>
-                {t(`attacks.${cmd.key}.name`)}
-              </SelectItem>
+            {categories.map((category) => (
+              <SelectGroup key={category.id}>
+                <SelectLabel className="text-primary font-semibold">
+                  {t(`glossary.categories.${category.id}.title`)}
+                </SelectLabel>
+                {category.attacks.map((attackKey) => {
+                  const index = attackCommands.findIndex(cmd => cmd.key === attackKey);
+                  return (
+                    <SelectItem key={attackKey} value={index.toString()}>
+                      {t(`attacks.${attackKey}.name`)}
+                    </SelectItem>
+                  );
+                })}
+              </SelectGroup>
             ))}
           </SelectContent>
         </Select>
