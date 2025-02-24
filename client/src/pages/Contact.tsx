@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="flex flex-col items-center mb-6">
               <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-primary/20">
                 <img
-                  src="/assets/WhatsApp Image 2025-02-24 at 9.51.43 PM.jpeg"
+                  src="/assets/profile.jpeg"
                   alt="Ahmed Nadir Ahmed Gilani"
                   className="w-full h-full object-cover"
                 />
