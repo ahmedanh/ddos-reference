@@ -10,7 +10,8 @@ export const ar = {
     copy: "نسخ",
     copied: "تم النسخ!",
     explanation: "الشرح",
-    purpose: "الغرض"
+    purpose: "الغرض",
+    selectAttack: "اختر نوع الهجوم"
   },
   attacks: {
     title: "مرجع أوامر هجمات حجب الخدمة",

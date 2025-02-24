@@ -10,7 +10,8 @@ export const en = {
     copy: "Copy",
     copied: "Copied!",
     explanation: "Explanation",
-    purpose: "Purpose"
+    purpose: "Purpose",
+    selectAttack: "Select Attack Type"
   },
   attacks: {
     title: "DDoS Attack Commands Reference",
