@@ -18,27 +18,27 @@ export const en = {
     categories: {
       flood: {
         title: "Flood Attacks",
-        description: "These attacks attempt to overwhelm a target by sending a large volume of traffic.",
+        description: "These attacks attempt to overwhelm a target by sending massive amounts of traffic, causing denial of service.",
         attacks: ["udpFlood", "icmpFlood", "synFlood", "massiveSynFlood", "randomData"]
       },
       scanning: {
-        title: "Scanning Attacks",
-        description: "These attacks are used to discover and analyze network vulnerabilities.",
+        title: "Scanning & Probing Attacks",
+        description: "These attacks are used to discover network vulnerabilities and open ports through systematic probing.",
         attacks: ["tcpFinScan", "tcpAckScan", "mtuTest"]
       },
       protocol: {
         title: "Protocol Manipulation Attacks",
-        description: "These attacks exploit weaknesses in network protocols.",
+        description: "These attacks exploit weaknesses in network protocols by manipulating packet headers and flags.",
         attacks: ["christmasTree", "ttlManipulation", "spoofedPort", "adjustPacketTiming"]
       },
       data: {
         title: "Data Manipulation Attacks",
-        description: "These attacks focus on manipulating packet contents and data patterns.",
+        description: "These attacks focus on manipulating the content and patterns of network packets.",
         attacks: ["icmpExfiltration", "customPattern", "customHttpGet", "fragmentedPacket"]
       },
       tcpip: {
         title: "TCP/IP Stack Attacks",
-        description: "These attacks target fundamental network protocol implementations.",
+        description: "These attacks target fundamental vulnerabilities in the TCP/IP protocol stack implementation.",
         attacks: ["traceroute", "landAttack"]
       }
     }

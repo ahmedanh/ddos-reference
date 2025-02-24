@@ -18,27 +18,27 @@ export const ar = {
     categories: {
       flood: {
         title: "هجمات الفيضان",
-        description: "هذه الهجمات تحاول إغراق الهدف بإرسال كمية كبيرة من حركة المرور.",
+        description: "هذه الهجمات تحاول إغراق الهدف بإرسال كمية هائلة من حركة المرور، مما يؤدي إلى حجب الخدمة.",
         attacks: ["udpFlood", "icmpFlood", "synFlood", "massiveSynFlood", "randomData"]
       },
       scanning: {
         title: "هجمات الفحص والمسح",
-        description: "تُستخدم هذه الهجمات لاكتشاف وتحليل نقاط الضعف في الشبكة.",
+        description: "تُستخدم هذه الهجمات لاكتشاف نقاط الضعف في الشبكة والمنافذ المفتوحة من خلال الفحص المنهجي.",
         attacks: ["tcpFinScan", "tcpAckScan", "mtuTest"]
       },
       protocol: {
         title: "هجمات التلاعب بالبروتوكولات",
-        description: "هذه الهجمات تستغل نقاط الضعف في بروتوكولات الشبكة.",
+        description: "هذه الهجمات تستغل نقاط الضعف في بروتوكولات الشبكة من خلال التلاعب برؤوس الحزم والعلامات.",
         attacks: ["christmasTree", "ttlManipulation", "spoofedPort", "adjustPacketTiming"]
       },
       data: {
         title: "هجمات التلاعب بالبيانات",
-        description: "تركز هذه الهجمات على التلاعب بمحتويات الحزم وأنماط البيانات.",
+        description: "تركز هذه الهجمات على التلاعب بمحتوى وأنماط حزم الشبكة.",
         attacks: ["icmpExfiltration", "customPattern", "customHttpGet", "fragmentedPacket"]
       },
       tcpip: {
         title: "هجمات على بروتوكول TCP/IP",
-        description: "تستهدف هذه الهجمات تطبيقات بروتوكولات الشبكة الأساسية.",
+        description: "تستهدف هذه الهجمات نقاط الضعف الأساسية في تنفيذ مجموعة بروتوكولات TCP/IP.",
         attacks: ["traceroute", "landAttack"]
       }
     }
